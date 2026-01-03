@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HFT Builds Trigger">
+  <test thread-count="5" name="HFTs">
+    <classes>
+      <class name="tests.LoginTests">
+      	    <methods>
+				<include name="userLogin"/>
+<!--				<include name="triggerSlimRhel8Hft"/>-->
+<!--				<include name="triggerSlimFirstFetchRhel8Hft"/>-->
+<!--				<include name="triggerFatRhel8Hft"/>-->
+<!--				<include name="triggerFatFirstFetchRhel8Hft"/>-->
+<!--				<include name="triggerPreOptimizedRhel8Hft"/>-->
+<!--				<include name="triggerPreOptimizedFirstFetchRhel8Hft"/>-->
+<!--				<include name="triggerFiftyDepthRhel8Hft"/>-->
+<!--				<include name="triggerSlimCentOs7Hft"/>-->
+<!--				<include name="triggerSlimFirstFetchCentOs7Hft"/>-->
+<!--				<include name="triggerFatCentOs7Hft"/>-->
+<!--				<include name="triggerFatFirstFetchCentOs7Hft"/>-->
+<!--				<include name="triggerPreOptimizedCentOs7Hft"/>-->
+<!--				<include name="triggerPreOptimizedFirstFetchCentOs7Hft"/>-->
+<!--				<include name="triggerFiftyDepthCentOs7Hft"/>-->
+<!--				<include name="triggerMOSLSlimCentOs7Hft"/>-->
+<!--				<include name="triggerMOSLSlimRhel8Hft"/>-->
+<!--				<include name="triggerMOSLFatRhel8Hft"/>-->
+<!--				<include name="triggerAllSOsForCentOS7"/>-->
+<!--				<include name="triggerAllSOsForRHEL8"/>	-->
+<!--				<include name="triggerAllMOSLSOsForCentOS7"/>	-->
+<!--				<include name="triggerAllMOSLSOsForRHEL8"/>	-->
+<!--				<include name="triggerAllDlls"/>-->
+<!--				<include name="triggerAllMOSLDlls"/>-->
+<!--				<include name="triggerClientExe"/>-->
+<!--				<include name="triggerMOSLClientExe"/>-->
+<!--				<include name="triggerAxisClientExe"/>-->
+				<include name="triggerMarketDataApi"/>
+<!--				<include name="triggerUtradeApi"/>-->
+<!--				<include name="triggerAllTBTsForCentOS7"/>-->
+<!--				<include name="triggerAllTBTsForRHEL8"/>-->
+<!--				<include name="morningBuilds"/>-->
+<!--				<include name="morningMOSLBuilds"/>-->
+<!--				<include name="triggerCompletePackage"/>-->
+<!--				<include name="triggerCompleteMOSLPackage"/>-->
+			</methods>
+      </class>
+    </classes>
+  </test>
+</suite>
