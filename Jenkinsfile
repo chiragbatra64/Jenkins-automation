@@ -48,9 +48,13 @@ pipeline{
 		always{
 			echo 'Pipeline Finished'
 			junit 'target/surefire-reports/*.xml' 
-		}success{
+		}
+		
+		success{
 			echo 'Tests passed'
-		}failure{
+		}
+		
+		failure{
 			echo 'Tests failed'
 		}
 	}
