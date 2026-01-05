@@ -8,6 +8,7 @@ pipeline{
 		string(name: 'PASSWORD', defaultValue: 'chirag18', description: 'Enter Jenkins Password')
 		string(name: 'BE_BRANCH', defaultValue: 'version/I2-0_Converge_2024', description: 'Enter Backend Branch')
 		string(name: 'FE_BRANCH', defaultValue: 'versionI2-0_Converge_2024', description: 'Enter Frontend Branch')
+		string(name: 'SUITE_XML', defaultValue: 'testng.xml', description: 'TestNG suite file')
 	}
 	
 	tools{
@@ -38,7 +39,8 @@ pipeline{
 				-Dusername=${params.USERNAME} ^
 				-Dpassword=${params.PASSWORD} ^
 				-Dbackend.branch=${params.BE_BRANCH} ^
-				-Dfrontend.branch=${params.FE_BRANCH}
+				-Dfrontend.branch=${params.FE_BRANCH} ^
+				-DsuiteXmlFile=${params.SUITE_XML}
 				"""
 			}
 		}
@@ -47,7 +49,7 @@ pipeline{
 	post{
 		always{
 			echo 'Pipeline Finished'
-			junit 'target/surefire-reports/*.xml' 
+			junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
 		}
 		
 		success{
