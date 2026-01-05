@@ -2,12 +2,12 @@ pipeline{
 	agent any
 	
 	parameters{
-		choice(name: 'Browser', choices: ['chrome', 'firefox', 'edge'], description: 'Select Browser')
+		choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Select Browser')
 		string(name: 'URL', defaultValue: 'http://10.0.0.40/jenkins/', description: 'Enter URL')
-		string(name: 'Username', defaultValue: 'chirag.batra', description: 'Enter Jenkins Username')
-		string(name: 'Password', defaultValue: 'chirag18', description: 'Enter Jenkins Password')
-		string(name: 'BE_Branch', defaultValue: 'version/I2-0_Converge_2024', description: 'Enter Backend Branch')
-		string(name: 'FE_Branch', defaultValue: 'versionI2-0_Converge_2024', description: 'Enter Frontend Branch')
+		string(name: 'USERNAME', defaultValue: 'chirag.batra', description: 'Enter Jenkins Username')
+		string(name: 'PASSWORD', defaultValue: 'chirag18', description: 'Enter Jenkins Password')
+		string(name: 'BE_BRANCH', defaultValue: 'version/I2-0_Converge_2024', description: 'Enter Backend Branch')
+		string(name: 'FE_BRANCH', defaultValue: 'versionI2-0_Converge_2024', description: 'Enter Frontend Branch')
 	}
 	
 	tools{
@@ -33,12 +33,12 @@ pipeline{
 			steps{
 				bat """
 				mvn test ^
-				-Dbrowser=${params.Browser} ^
+				-Dbrowser=${params.BROWSER} ^
 				-Dtesting.url=${params.URL} ^
-				-Dusername=${params.Username} ^
-				-Dpassword=${params.Password} ^
-				-Dbackend.branch=${params.BE_Branch} ^
-				-Dfrontend.branch=${params.FE_Branch}
+				-Dusername=${params.USERNAME} ^
+				-Dpassword=${params.PASSWORD} ^
+				-Dbackend.branch=${params.BE_BRANCH} ^
+				-Dfrontend.branch=${params.FE_BRANCH}
 				"""
 			}
 		}
