@@ -34,7 +34,7 @@ pipeline{
 				bat """
 				mvn test ^
 				-Dbrowser=${params.Browser} ^
-				-Dtesting.url=$[params.URL] ^
+				-Dtesting.url=${params.URL} ^
 				-Dusername=${params.Username} ^
 				-Dpassword=${params.Password} ^
 				-Dbackend.branch=${params.BE_Branch} ^
