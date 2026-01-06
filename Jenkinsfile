@@ -50,7 +50,7 @@ pipeline{
 				-Dpassword=${params.PASSWORD} ^
 				-Dbackend.branch=${params.BE_BRANCH} ^
 				-Dfrontend.branch=${params.FE_BRANCH} ^
-				-DmethodsRegex="${env.METHODS_REGEX}"
+				-Dgroups="${params.METHODS}"
 				"""
 			}
 		}
