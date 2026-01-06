@@ -2,9 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="HFT Builds Trigger">
   <test thread-count="5" name="HFTs">
+	  <groups>
+            <run>
+                <include name="${groups}"/>
+            </run>
+        </groups>
     <classes>
       <class name="tests.LoginTests">
-      	    <methods>
+<!--      	    <methods>-->
 <!--				<include name="userLogin"/>-->
 <!--				<include name="triggerSlimRhel8Hft"/>-->
 <!--				<include name="triggerSlimFirstFetchRhel8Hft"/>-->
@@ -40,8 +45,8 @@
 <!--				<include name="morningMOSLBuilds"/>-->
 <!--				<include name="triggerCompletePackage"/>-->
 <!--				<include name="triggerCompleteMOSLPackage"/>-->
-					<include name="${methodsRegex}"/>
-			</methods>
+<!--					<include name="${methodsRegex}"/>-->
+<!--			</methods>-->
       </class>
     </classes>
   </test>

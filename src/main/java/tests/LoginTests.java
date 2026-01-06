@@ -19,14 +19,14 @@ import utils.ConfigReader;
 
 public class LoginTests extends BaseDriver {
 	
-	@Test(priority = 1)
+	@Test(priority = 1, groups = {"morning", "mornigMosl", "complete", "completeMosl", "clientExe", "marketdataapi", "utradeapi", "clientExeAxis", "clientExeMosl", "allSo7", "'allSo8", "'allDll", "slim7", "slimfirst7", "fat7", "fatfirst7", "pre7", "prefirst7", "fifty7", "slim8", "slimfirst8", "fat8", "fatfirst8", "pre8", "prefirst8", "fifty8", "slim7Mosl", "slim8Mosl", "fat8Mosl", "allSoMosl7", "allSoMosl8", "allDllMosl", "tbt7", "tbt8"})
 	public void userLogin() {
 		LoginPage loginPage = new LoginPage();
 		loginPage.loginFull(ConfigReader.get("username"), ConfigReader.get("password"), driver);
 		Assert.assertTrue(loginPage.isLoggedIn(driver), "Not Logged In");
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2, groups = {"complete", "slim8"})
 	public void triggerSlimRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -39,7 +39,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 3, groups = {"complete", "slimfirst8"})
 	public void triggerSlimFirstFetchRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -52,7 +52,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 4, groups = {"complete", "fat8"})
 	public void triggerFatRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -65,7 +65,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 5, groups = {"complete", "fatfirst8"})
 	public void triggerFatFirstFetchRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -78,7 +78,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 6, groups = {"complete", "pre8"})
 	public void triggerPreOptimizedRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -91,7 +91,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 7, groups = {"complete", "prefirst8"})
 	public void triggerPreOptimizedFirstFetchRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -104,7 +104,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 8, groups = {"complete", "fifty8"})
 	public void triggerFiftyDepthRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -117,7 +117,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 9, groups = {"complete", "slim7", "morning"})
 	public void triggerSlimCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -130,7 +130,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 10, groups = {"complete", "slimfirst7"})
 	public void triggerSlimFirstFetchCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -143,7 +143,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 11, groups = {"complete", "fat7"})
 	public void triggerFatCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -156,7 +156,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 12, groups = {"complete", "fatfirst7"})
 	public void triggerFatFirstFetchCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -169,7 +169,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 13, groups = {"complete", "pre7"})
 	public void triggerPreOptimizedCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -182,7 +182,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 14, groups = {"complete", "prefirst7"})
 	public void triggerPreOptimizedFirstFetchCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -195,7 +195,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 15)
+	@Test(priority = 15, groups = {"complete", "fifty7"})
 	public void triggerFiftyDepthCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -208,7 +208,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 16)
+	@Test(priority = 16, groups = {"complete", "allSo7"})
 	public void triggerAllSOsForCentOS7() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_muTradeSo7();
@@ -281,7 +281,7 @@ public class LoginTests extends BaseDriver {
 		so.pressBuild();
 		so.returnToDashboard();
 	}
-	@Test(priority = 17)
+	@Test(priority = 17, groups = {"complete", "allSo8"})
 	public void triggerAllSOsForRHEL8() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_muTradeSo8();
@@ -355,7 +355,7 @@ public class LoginTests extends BaseDriver {
 		so.returnToDashboard();
 	}
 	
-	@Test(priority = 18)
+	@Test(priority = 18, groups = {"completeMosl", "allSoMosl7"})
 	public void triggerAllMOSLSOsForCentOS7() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_muTradeSo7();
@@ -428,7 +428,7 @@ public class LoginTests extends BaseDriver {
 		so.returnToDashboard();
 	}
 	
-	@Test(priority = 19)
+	@Test(priority = 19, groups = {"completeMosl", "allSoMosl8"})
 	public void triggerAllMOSLSOsForRHEL8() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_muTradeSo8();
@@ -501,7 +501,7 @@ public class LoginTests extends BaseDriver {
 		so.returnToDashboard();
 	}
 	
-	@Test(priority = 20)
+	@Test(priority = 20, groups = {"complete", "allDll"})
 	public void triggerAllDlls() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Dll();
@@ -577,7 +577,7 @@ public class LoginTests extends BaseDriver {
 		dll.returnToDashboard();
 	}
 	
-	@Test(priority = 21)
+	@Test(priority = 21, groups = {"completeMosl", "allDllMosl"})
 	public void triggerAllMOSLDlls() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Dll();
@@ -640,7 +640,7 @@ public class LoginTests extends BaseDriver {
 		dll.returnToDashboard();
 	}
 	
-	@Test(priority = 22)
+	@Test(priority = 22, groups = {"complete", "clientExe", "morning"})
 	public void triggerClientExe() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Client_Exe();
@@ -656,7 +656,7 @@ public class LoginTests extends BaseDriver {
 		exe.returnToDashboard();
 	}
 	
-	@Test(priority = 23)
+	@Test(priority = 23, groups = {"completeMosl", "clientExeMosl", "morningMosl"})
 	public void triggerMOSLClientExe() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Client_Exe();
@@ -672,7 +672,7 @@ public class LoginTests extends BaseDriver {
 		exe.returnToDashboard();
 	}
 	
-	@Test(priority = 24)
+	@Test(priority = 24, groups = {"complete", "clientExeAxis"})
 	public void triggerAxisClientExe() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Client_Exe();
@@ -688,7 +688,7 @@ public class LoginTests extends BaseDriver {
 		exe.returnToDashboard();
 	}
 	
-	@Test(priority = 25)
+	@Test(priority = 25, groups = {"complete", "utradeapi", "completeMosl", "morning", "morningMosl"})
 	public void triggerUtradeApi() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Utrade_Api();
@@ -703,7 +703,7 @@ public class LoginTests extends BaseDriver {
 		api.returnToDashboard();
 	}
 	
-	@Test(priority=26)
+	@Test(priority=26, groups = {"complete", "marketdataapi", "completeMosl", "morning", "morningMosl"})
 	public void triggerMarketDataApi() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_Dll();
@@ -717,7 +717,7 @@ public class LoginTests extends BaseDriver {
 		dll.returnToDashboard();
 	}
 	
-	@Test(priority = 27)
+	@Test(priority = 27, groups = {"complete", "tbt7"})
 	public void triggerAllTBTsForCentOS7() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_tbt7();
@@ -745,7 +745,7 @@ public class LoginTests extends BaseDriver {
 		tbt.returnToDashboard();
 	}
 	
-	@Test(priority = 28)
+	@Test(priority = 28, groups = {"complete", "tbt8"})
 	public void triggerAllTBTsForRHEL8() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_tbt8();
@@ -777,7 +777,7 @@ public class LoginTests extends BaseDriver {
 		tbt.returnToDashboard();
 	}
 	
-	@Test(priority = 29)
+	@Test(priority = 29, groups = {"completeMosl", "slim7Mosl", "morningMosl"})
 	public void triggerMOSLSlimCentOs7Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_7();
@@ -790,7 +790,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 30)
+	@Test(priority = 30, groups = {"completeMosl", "slim8Mosl", "morningMosl"})
 	public void triggerMOSLSlimRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
@@ -803,7 +803,7 @@ public class LoginTests extends BaseDriver {
 		hft.returnToDashboard();
 	}
 	
-	@Test(priority = 31)
+	@Test(priority = 31, groups = {"completeMosl", "fat8Mosl"})
 	public void triggerMOSLFatRhel8Hft() {
 		Dashboard dashboard = new Dashboard();
 		dashboard.enter_HFT_8();
