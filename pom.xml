@@ -63,6 +63,9 @@
 <!--                    	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 						<suiteXmlFile>testng.xml</suiteXmlFile>	
                 	</suiteXmlFiles>
+                	<systemPropertyVariables>
+            			<methods>${methods}</methods>
+        			</systemPropertyVariables>
 <!--                    <includes>-->
 <!--                        <include>**/*Test.java</include>-->
 <!--                        <include>**/*Tests.java</include>-->
