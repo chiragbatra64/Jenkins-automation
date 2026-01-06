@@ -5,7 +5,9 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ConfigReader;
@@ -14,7 +16,7 @@ import utils.WebDriverUtil;
 public class BaseDriver {
 	protected WebDriver driver;
 	
-	@BeforeClass
+	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 		System.out.println("Enter");
 		System.out.println("Browser: " + ConfigReader.get("browser"));
@@ -27,10 +29,10 @@ public class BaseDriver {
 		System.out.println("After getting url");
 	}
 	
-//	@AfterClass
-//	public void tearDown() {
-//		if(driver != null) {
-//			driver.quit();
-//		}
-//	}
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+		if(driver != null) {
+			driver.quit();
+		}
+	}
 }
