@@ -16,7 +16,7 @@ import utils.WebDriverUtil;
 public class BaseDriver {
 	protected WebDriver driver;
 	
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		System.out.println("Enter");
 		System.out.println("Browser: " + ConfigReader.get("browser"));
@@ -29,7 +29,7 @@ public class BaseDriver {
 		System.out.println("After getting url");
 	}
 	
-	@AfterMethod(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		if(driver != null) {
 			driver.quit();
