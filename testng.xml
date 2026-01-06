@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.LoginTests">
       	    <methods>
-				<include name="userLogin"/>
+<!--				<include name="userLogin"/>-->
 <!--				<include name="triggerSlimRhel8Hft"/>-->
 <!--				<include name="triggerSlimFirstFetchRhel8Hft"/>-->
 <!--				<include name="triggerFatRhel8Hft"/>-->
@@ -13,7 +13,7 @@
 <!--				<include name="triggerPreOptimizedRhel8Hft"/>-->
 <!--				<include name="triggerPreOptimizedFirstFetchRhel8Hft"/>-->
 <!--				<include name="triggerFiftyDepthRhel8Hft"/>-->
-				<include name="triggerSlimCentOs7Hft"/>
+<!--				<include name="triggerSlimCentOs7Hft"/>-->
 <!--				<include name="triggerSlimFirstFetchCentOs7Hft"/>-->
 <!--				<include name="triggerFatCentOs7Hft"/>-->
 <!--				<include name="triggerFatFirstFetchCentOs7Hft"/>-->
@@ -40,6 +40,7 @@
 <!--				<include name="morningMOSLBuilds"/>-->
 <!--				<include name="triggerCompletePackage"/>-->
 <!--				<include name="triggerCompleteMOSLPackage"/>-->
+					<include name="${methods}"/>
 			</methods>
       </class>
     </classes>
