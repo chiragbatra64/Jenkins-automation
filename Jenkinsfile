@@ -9,6 +9,7 @@ pipeline{
 		string(name: 'BE_BRANCH', defaultValue: 'version/I2-0_Converge_2024', description: 'Enter Backend Branch')
 		string(name: 'FE_BRANCH', defaultValue: 'versionI2-0_Converge_2024', description: 'Enter Frontend Branch')
 		string(name: 'SUITE_XML', defaultValue: 'testng.xml', description: 'TestNG suite file')
+		string(name: 'METHODS', defaultValue: 'userLogin', description: 'TestNG methods to run')
 	}
 	
 	tools{
@@ -40,7 +41,8 @@ pipeline{
 				-Dpassword=${params.PASSWORD} ^
 				-Dbackend.branch=${params.BE_BRANCH} ^
 				-Dfrontend.branch=${params.FE_BRANCH} ^
-				-DsuiteXmlFile=${params.SUITE_XML}
+				-DsuiteXmlFile=${params.SUITE_XML} ^
+				-Dmethods=${params.METHODS}
 				"""
 			}
 		}
