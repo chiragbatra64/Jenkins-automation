@@ -64,7 +64,7 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>	
                 	</suiteXmlFiles>
                 	<systemPropertyVariables>
-            			<methods>${methods}</methods>
+            			<methodsRegex>${methodsRegex}</methodsRegex>
         			</systemPropertyVariables>
 <!--                    <includes>-->
 <!--                        <include>**/*Test.java</include>-->

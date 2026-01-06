@@ -23,6 +23,17 @@ pipeline{
 			}
 		}
 		
+		stage('Prepare Methods Regex') {
+    		steps {
+        		script {
+            		// Convert comma-separated methods to regex: a,b,c -> a|b|c
+            		env.METHODS_REGEX = params.METHODS.replaceAll('\\s+', '').replace(',', '|')
+            		echo "Running methods regex: ${env.METHODS_REGEX}"
+        		}
+    		}
+		}
+		
+		
 		stage('Build'){
 			steps{
 				bat 'mvn clean compile -DskipTests'
