@@ -40,7 +40,7 @@
 <!--				<include name="morningMOSLBuilds"/>-->
 <!--				<include name="triggerCompletePackage"/>-->
 <!--				<include name="triggerCompleteMOSLPackage"/>-->
-					<include name="${methods}"/>
+					<include name="${methodsRegex}"/>
 			</methods>
       </class>
     </classes>
