@@ -60,7 +60,8 @@
                 <version>3.5.4</version>
                 <configuration>
 					<suiteXmlFiles>
-                    	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+<!--                    	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+						<suiteXmlFile>testng.xml</suiteXmlFile>	
                 	</suiteXmlFiles>
 <!--                    <includes>-->
 <!--                        <include>**/*Test.java</include>-->
