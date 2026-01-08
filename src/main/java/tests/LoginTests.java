@@ -398,7 +398,7 @@ public class LoginTests extends BaseDriver {
 		so.clickBuildWithParameters();
 		so.enterBranch();
 		so.selectReleaseVersion();
-		so.selectAlgoName("TwapSeitch");
+		so.selectAlgoName("TwapSwitch");
 		so.selectEnableMoslFlag();
 		so.pressBuild();
 		so.clickBuildWithParameters();
@@ -471,7 +471,7 @@ public class LoginTests extends BaseDriver {
 		so.clickBuildWithParameters();
 		so.enterBranch();
 		so.selectReleaseVersion();
-		so.selectAlgoName("TwapSeitch");
+		so.selectAlgoName("TwapSwitch");
 		so.selectEnableMoslFlag();
 		so.pressBuild();
 		so.clickBuildWithParameters();
