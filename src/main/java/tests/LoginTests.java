@@ -418,7 +418,6 @@ public class LoginTests extends BaseDriver {
 		so.selectReleaseVersion();
 		so.selectAlgoName("TwapSwitchIndex");
 		so.selectEnableMoslFlag();
-		so.selectJobbinhWithPrecisionFour();
 		so.pressBuild();
 		so.clickBuildWithParameters();
 		so.enterBranch();
@@ -491,7 +490,6 @@ public class LoginTests extends BaseDriver {
 		so.selectReleaseVersion();
 		so.selectAlgoName("TwapSwitchIndex");
 		so.selectEnableMoslFlag();
-		so.selectJobbinhWithPrecisionFour();
 		so.pressBuild();
 		so.clickBuildWithParameters();
 		so.enterBranch();
