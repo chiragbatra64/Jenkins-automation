@@ -35,4 +35,8 @@ public class BaseDriver {
 			driver.quit();
 		}
 	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
 }
