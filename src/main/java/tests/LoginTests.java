@@ -667,6 +667,7 @@ public class LoginTests extends BaseDriver {
 		exe.checkNewUICheckBox();
 		exe.checkalgoEnabledCheckbox();
 		exe.checkEnableMOSLFlag();
+		exe.pressBuild();
 		exe.returnToDashboard();
 	}
 	
@@ -683,6 +684,7 @@ public class LoginTests extends BaseDriver {
 		exe.checkNewUICheckBox();
 		exe.checkalgoEnabledCheckbox();
 		exe.checkAxisCapitalEnabledCheckBox();
+		exe.pressBuild();
 		exe.returnToDashboard();
 	}
 	
