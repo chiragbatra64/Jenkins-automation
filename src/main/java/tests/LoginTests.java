@@ -19,7 +19,7 @@ import utils.ConfigReader;
 
 public class LoginTests extends BaseDriver {
 	
-	@Test(priority = 1, groups = {"morning", "mornigMosl", "complete", "completeMosl", "clientExe", "marketdataapi", "utradeapi", "clientExeAxis", "clientExeMosl", "allSo7", "'allSo8", "'allDll", "slim7", "slimfirst7", "fat7", "fatfirst7", "pre7", "prefirst7", "fifty7", "slim8", "slimfirst8", "fat8", "fatfirst8", "pre8", "prefirst8", "fifty8", "slim7Mosl", "slim8Mosl", "fat8Mosl", "allSoMosl7", "allSoMosl8", "allDllMosl", "tbt7", "tbt8"})
+	@Test(priority = 1, groups = {"morning", "morningMosl", "complete", "completeMosl", "clientExe", "marketdataapi", "utradeapi", "clientExeAxis", "clientExeMosl", "allSo7", "'allSo8", "'allDll", "slim7", "slimfirst7", "fat7", "fatfirst7", "pre7", "prefirst7", "fifty7", "slim8", "slimfirst8", "fat8", "fatfirst8", "pre8", "prefirst8", "fifty8", "slim7Mosl", "slim8Mosl", "fat8Mosl", "allSoMosl7", "allSoMosl8", "allDllMosl", "tbt7", "tbt8"})
 	public void userLogin() {
 		LoginPage loginPage = new LoginPage();
 		loginPage.loginFull(ConfigReader.get("username"), ConfigReader.get("password"), driver);
